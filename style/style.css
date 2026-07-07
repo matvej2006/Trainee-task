@@ -3,6 +3,7 @@
     margin: 0%;
     padding: 0%;
 }
+
 .back-video{
     position: fixed;
     right: 0;
@@ -37,4 +38,63 @@ header{
     padding-right: 20px;
     padding-left: 20px;
     border-right: 1px solid rgba(255, 255, 255 , 0.4);
+}
+
+.vid-art{
+    width: 1760px;
+    height: fit-content;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vid-art-text{
+    width: 1167px;
+}
+.vid-btns{
+    margin-top: 37px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+.vid-btn-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 207px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #ffffff calc(100% - 61px), #2b045b calc(100% - 61px));
+    padding: 18px 20px;
+}
+.vid-btn-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 207px;
+    height: 55px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #0b192f calc(100% - 61px), #ffffff calc(100% - 61px));
+    padding: 18px 20px;
+}
+.vid-btn-text{
+  font-size: 16px;
+  text-align: start;
+}
+.vid-btn-icon-1{
+    width: 17px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vid-btn-icon-2{
+    width: 17px;
+    height: 17px;
+    color: #27005B;
 }
