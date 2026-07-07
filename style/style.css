@@ -59,28 +59,24 @@ header{
     display: flex;
     flex-direction: row;
 }
-.vid-btn-1{
+.vid-btn{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 207px;
     height: 55px;
-    border: none;
     border-radius: 5px;
-    background: linear-gradient(120deg, #ffffff calc(100% - 61px), #2b045b calc(100% - 61px));
     padding: 18px 20px;
 }
-.vid-btn-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#vid-btn-1{
+    border: none;
+    background: linear-gradient(120deg, #ffffff calc(100% - 61px), #2b045b calc(100% - 61px));
+    margin-right: 40px;
+}
+#vid-btn-2{
     color: white;
-    width: 207px;
-    height: 55px;
     border: 1px solid white;
-    border-radius: 5px;
-    background: linear-gradient(120deg, #0b192f calc(100% - 61px), #ffffff calc(100% - 61px));
-    padding: 18px 20px;
+    background: linear-gradient(120deg, rgb(0,0,0,0) calc(100% - 61px), #ffffff calc(100% - 61px));
 }
 .vid-btn-text{
   font-size: 16px;
