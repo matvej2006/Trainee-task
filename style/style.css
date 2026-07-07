@@ -94,3 +94,91 @@ header{
     height: 17px;
     color: #27005B;
 }
+
+.vid-art-form{
+    width: 425px;
+    height: 395px;
+    padding: 30px 0px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #ffffff 50%, #27005B 50%);
+}
+.form-inner{
+    padding: 50px 40px 0px 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-btns{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(0deg, #ffffff 50%, #27005B 50%);
+}
+.form-btn-1{
+    width: 212.5px;
+    height: 47px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: white;
+    color: #27005B;
+}
+.form-btn-2{
+    width: 212.5px;
+    height: 47px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #27005B;
+    color: white;
+}
+.google-btn{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 16px;
+    color: white;     
+    width: 346px;       
+    height: 48px;
+    background-color: #BDAB6E; 
+    border: none;
+    border-radius: 5px;
+    gap: 10px; 
+    margin-bottom: 30px;
+}
+.start-jour-btn{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0, 0.4);
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 30px; 
+}
+.divider::before,
+.divider::after {
+  content: ""; 
+  flex: 1; 
+  border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+.divider::before {
+  margin-right: 27px;
+}
+.divider::after {
+  margin-left: 27px;
+}
+.form-btn-create{
+    width: 346px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #BDAB6E;
+    color: #BDAB6E;
+    font-size: 16px;
+    background-color: transparent;
+}
