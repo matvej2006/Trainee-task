@@ -1,2 +1,3 @@
 import './style.css'
-import './round_list.js'
+import './round-list.js'
+import './crypto-ws.js'
