@@ -21,11 +21,15 @@ body{
     padding: 35px 80px;
 }
 header{
-    display: flex;
-    justify-content: space-between;
+    color: white;
+    z-index: 2;
+    position: relative;
 }
 .logo{
     width: 173px;
+    position: fixed;
+    top: 35px;
+    left: 80px;
 }
 .logo img{
     width:100%;
@@ -36,6 +40,9 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 35px;
+    right: 80px;
 }
 .nav-elem{
     padding-right: 20px;
@@ -188,6 +195,7 @@ header{
 }
 
 .crypto-dashboard{
+    z-index: 0;
     position: relative;
     background-color: #031C39;
     height: 1013px;
