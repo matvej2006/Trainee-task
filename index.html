@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Kairos</title>
 </head>
@@ -98,7 +99,7 @@
     <div class="crypto-dashboard">
         <img width="473.6px" src="img/left top corner.png" class="corner-decor top-left" alt="">
         <img width="627px" src="img/right bottom corner.png" class="corner-decor bottom-right" alt="">
-        <div class="crypto-column left-side">
+        <div class="crypto-column left-side" id="left-column">
             <div class="crypto-item">
                 <span class="price">$87,965.62</span>
                 <span class="name">Bitcoin</span>
@@ -125,15 +126,23 @@
                 <img src="img/USD.png" alt="" class="coin-icon">
             </div>
         </div>
-        <div class="center-circle">
+        <div class="center-circle" id="center-circle">
             <div class="circle-content">
                 <div class="circle-content-h">ONLINE BANKING</div>
-                <button class="add-crypto-btn">
-                    Add a Cryptocurrency <span>&gt;</span>
-                </button>
+                <div class="dropdown-container">
+                    <button class="add-crypto-btn" id="add-crypto-btn">
+                        Add a Cryptocurrency <span>&gt;</span>
+                    </button>
+                    <ul id="crypto-dropdown" class="dropdown-list hidden">
+                        <li data-name="USD Coin" data-price="$0.9997" data-img="img/USD.png">USD Coin</li>
+                        <li data-name="Binance Coin" data-price="$844.91" data-img="img/Binance.png">Binance Coin</li>
+                        <li data-name="Tether" data-price="$1.000" data-img="img/Tether.png">Tether</li>
+                        <li data-name="Solana" data-price="$124.53" data-img="img/Solana.png">Solana</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="crypto-column right-side">
+        <div class="crypto-column right-side" id="right-column">
             <div class="crypto-item">
                 <img src="img/Binance.png" alt="" class="coin-icon">
                 <span class="name">Binance Coin</span>
