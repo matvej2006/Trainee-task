@@ -60,7 +60,7 @@
     <div class="head">
         <div class="vid-art">
             <div class="vid-art-text">
-                <div style="margin-bottom: 40px; font-size: 64px; text-transform: uppercase;" class="main-title">
+                <div style="margin-bottom: 40px; text-transform: uppercase;" class="main-title">
                     From the Field of All Possibility
                 </div>
                 <div style="font-size: 18px;" class="sub-text">
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="vid-art-form">
-                <div style="text-align: center; font-size: 32px; margin-bottom: 30px;">
+                <div style="text-align: center; margin-bottom: 30px;" class="form-h">
                     ONLINE BANKING
                 </div>
                 <div class="form-btns">
@@ -154,14 +154,18 @@
             <div class="circle-content">
                 <div class="circle-content-h">ONLINE BANKING</div>
                 <div class="dropdown-container">
-                    <button class="add-crypto-btn" id="add-crypto-btn">
+                    <button class="add-crypto-btn">
                         Add a Cryptocurrency <span>&gt;</span>
                     </button>
                     <ul id="crypto-dropdown" class="dropdown-list hidden">
-                        <li data-name="USD Coin" data-price="$0.9997" data-img="src/assets/USD.png">USD Coin</li>
-                        <li data-name="Binance Coin" data-price="$844.91" data-img="src/assets/Binance.png">Binance Coin</li>
-                        <li data-name="Tether" data-price="$1.000" data-img="src/assets/Tether.png">Tether</li>
-                        <li data-name="Solana" data-price="$124.53" data-img="src/assets/Solana.png">Solana</li>
+                        <li data-name="USD Coin" data-price="$0.9997" data-img="src/assets/USD.png">
+                            <img src="src/assets/USD.png" alt="">USD Coin</li>
+                        <li data-name="Binance Coin" data-price="$844.91" data-img="src/assets/Binance.png">
+                            <img src="src/assets/Binance.png" alt="">Binance Coin</li>
+                        <li data-name="Tether" data-price="$1.000" data-img="src/assets/Tether.png">
+                            <img src="src/assets/Tether.png" alt="">Tether</li>
+                        <li data-name="Solana" data-price="$124.53" data-img="src/assets/Solana.png">
+                            <img src="src/assets/Solana.png" alt="">Solana</li>
                     </ul>
                 </div>
             </div>
@@ -195,7 +199,7 @@
         </div>
     </div>
     <div class="crypto-dashboard-mobile">
-        <img width="473.6px" src="src/assets/left top corner.png" class="corner-decor top-left" alt="">
+        <img width="277.49px" src="src/assets/left top corner.png" class="corner-decor top-left" alt="">
         <img width="627px" src="src/assets/right bottom corner.png" class="corner-decor bottom-right" alt="">
         <div class="center-circle" id="center-circle">
             <div class="circle-content">
@@ -205,67 +209,91 @@
                         Add a Cryptocurrency <span>&gt;</span>
                     </button>
                     <ul id="crypto-dropdown" class="dropdown-list hidden">
-                        <li data-name="USD Coin" data-price="$0.9997" data-img="src/assets/USD.png">USD Coin</li>
-                        <li data-name="Binance Coin" data-price="$844.91" data-img="src/assets/Binance.png">Binance Coin</li>
-                        <li data-name="Tether" data-price="$1.000" data-img="src/assets/Tether.png">Tether</li>
-                        <li data-name="Solana" data-price="$124.53" data-img="src/assets/Solana.png">Solana</li>
+                        <li data-name="USD Coin" data-price="$0.9997" data-img="src/assets/USD.png">
+                            <img src="src/assets/USD.png" alt="">USD Coin</li>
+                        <li data-name="Binance Coin" data-price="$844.91" data-img="src/assets/Binance.png">
+                            <img src="src/assets/Binance.png" alt="">Binance Coin</li>
+                        <li data-name="Tether" data-price="$1.000" data-img="src/assets/Tether.png">
+                            <img src="src/assets/Tether.png" alt="">Tether</li>
+                        <li data-name="Solana" data-price="$124.53" data-img="src/assets/Solana.png">
+                            <img src="src/assets/Solana.png" alt="">Solana</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="crypto-two-columns">
             <div class="crypto-column left-side" id="left-column">
-                <div class="crypto-item">
+                <div class="crypto-item bitc-item">
                     <img src="src/assets/Bitcoin.png" alt="" class="coin-icon">
-                    <span class="name">Bitcoin</span>
-                    <span class="price">$87,965.62</span>
+                    <div>
+                        <span class="name">Bitcoin</span>
+                        <span class="price">$87,965.62</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Ethereum.webp" alt="" class="coin-icon">
-                    <span class="name">Ethereum</span>
-                    <span class="price">$2,950.04</span>
+                    <div>
+                        <span class="name">Ethereum</span>
+                        <span class="price">$2,950.04</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Solana.png" alt="" class="coin-icon">
-                    <span class="name">Solana</span>
-                    <span class="price">$124.53</span>
+                    <div>
+                        <span class="name">Solana</span>
+                        <span class="price">$124.53</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/XPR.png" alt="" class="coin-icon">
-                    <span class="name">XPR</span>
-                    <span class="price">$1.862</span>
+                    <div>
+                        <span class="name">XPR</span>
+                        <span class="price">$1.862</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/USD.png" alt="" class="coin-icon">
-                    <span class="name">USD Coin</span>
-                    <span class="price">$0.9997</span>
+                    <div>
+                        <span class="name">USD Coin</span>
+                        <span class="price">$0.9997</span>
+                    </div>
                 </div>
             </div>
             <div class="crypto-column right-side" id="right-column">
                 <div class="crypto-item">
                     <img src="src/assets/Binance.png" alt="" class="coin-icon">
-                    <span class="name">Binance Coin</span>
-                    <span class="price">$844.91</span>
+                    <div>
+                        <span class="name">Binance Coin</span>
+                        <span class="price">$844.91</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Midnight.webp" alt="" class="coin-icon">
-                    <span class="name">Midnight</span>
-                    <span class="price">$0.06398</span>
+                    <div>
+                        <span class="name">Midnight</span>
+                        <span class="price">$0.06398</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Dogecoin.png" alt="" class="coin-icon">
-                    <span class="name">Dogecoin</span>
-                    <span class="price">$0.1278</span>
+                    <div>
+                        <span class="name">Dogecoin</span>
+                        <span class="price">$0.1278</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Sui.png" alt="" class="coin-icon">
-                    <span class="name">Sui</span>
-                    <span class="price">$1.427</span>
+                    <div>
+                        <span class="name">Sui</span>
+                        <span class="price">$1.427</span>
+                    </div>
                 </div>
                 <div class="crypto-item">
                     <img src="src/assets/Tether.png" alt="" class="coin-icon">
-                    <span class="name">Tether</span>
-                    <span class="price">$1.000</span>
+                    <div>
+                        <span class="name">Tether</span>
+                        <span class="price">$1.000</span>
+                    </div>
                 </div>
             </div>
         </div>

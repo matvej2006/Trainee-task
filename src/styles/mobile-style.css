@@ -1,0 +1,212 @@
+@media (max-width: 360px){
+    .nav-elem{ 
+        display: none !important; 
+    }
+    .nav{
+        position: fixed;
+        top: 29px;
+        right: 20px;
+    }
+    .burger-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 26px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 999;
+        padding: 0;
+    }
+    .burger-btn span{
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff; 
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    .mobile-menu-backdrop{
+        display: block; 
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10000;
+        pointer-events: none;
+        transition: background-color 0.4s ease;
+    }
+    .mobile-menu-backdrop.active{
+        pointer-events: auto;
+        background-color: #031c3900; 
+    }
+    .mobile-menu-drawer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #031C39;
+        box-sizing: border-box;
+        padding: 214px 174px 400px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transform: translateX(100%);
+        will-change: transform;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-menu-backdrop.active .mobile-menu-drawer{
+        transform: translateX(0);
+    }
+    .mobile-menu-drawer .menu-close-btn{
+        position: absolute;
+        top: 29px;
+        right: 59.9px;
+        width: 46px;
+        height: 46px;
+        background-color: #27005B; 
+        border: none;
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .mobile-menu-drawer .menu-close-btn:hover{
+        transform: scale(1.1);
+    }
+    .mobile-menu-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 35px; 
+        align-items: flex-start; 
+    }
+    .mobile-nav-elem{
+        color: #ffffff;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .logo{
+        width: 100px;
+        position: fixed;
+        top: 35px;
+        left: 20px;
+        opacity: 0%;
+        transform: translateY(-75px);
+        animation: fadeInFT 1s ease-out forwards 400ms;
+    }
+    .head{
+        width: 320px;
+        padding: 35px 20px;
+    }
+    .vid-art{
+        height: fit-content;
+        margin-top: 117px;
+        margin-bottom: 57px;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .vid-art-text{
+        width: 100%;
+    }
+    .main-title{
+        font-size: 36px;
+        width: 100%;
+    }
+    .sub-text{
+        width: 100%;
+    }
+    .vid-btns{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .vid-art-form{
+        width: 100%;
+        padding-bottom: 41px;
+    }
+    .form-h{
+        font-size: 24px;
+    }
+    .form-inner{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .crypto-dashboard{
+        display: none;
+    }
+    .dropdown-container{
+        margin-bottom: 27px;
+    }
+    .crypto-dashboard-mobile{
+        display: flex;
+        flex-direction: column;
+        padding-top: 45px;
+        padding-left: 16px;
+        padding-right: 20px;
+        padding-bottom: 150px;
+        align-items: center;
+    }
+    .top-left{
+        top: 1291px;
+        left: -42px;
+    }
+    .bottom-right{
+        top: 1838px;
+        left: 46px;
+    }
+    .center-circle{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: fit-content;
+        background: none;
+    }
+    .circle-content{
+        width: 100%;
+        height: fit-content;
+        gap: 20px;
+    }
+    .circle-content-h{
+        font-size: 24px;
+    }
+    .crypto-two-columns{
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+        gap: 20px;
+    }
+    .bitc-item{
+        margin-bottom: 19px;
+    }
+    .left-side{
+        align-items: flex-start;
+    }
+    .crypto-item{
+        gap: 10px;
+        font-size: 16px;
+    }
+    .coin-icon{
+        width: 36px;
+    }
+    .crypto-item div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .add-crypto-btn{
+        width: 320px;
+        font-size: 16px;
+        gap: 0;
+        padding-right: 12.5px;
+    }
+}

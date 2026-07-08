@@ -4,15 +4,15 @@
     }
     .nav{
         position: fixed;
-        top: 34.95px;
-        left: 662.09px;
+        top: 29px;
+        right: 59.91px;
     }
     .burger-btn{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 46px;
-        height: 46px;
+        width: 26px;
+        height: 26px;
         background: none;
         border: none;
         cursor: pointer;
@@ -30,7 +30,7 @@
         display: block; 
         position: fixed;
         top: 0;
-        left: 662.09;
+        left: 0;
         width: 100vw;
         height: 100vh;
         z-index: 10000;
@@ -117,18 +117,25 @@
         gap: 60px;
     }
     .vid-art-text{
-        width: 648px;
+        width: 100%;
+    }
+    .main-title{
+        font-size: 64px;
+        width: 100%;
+    }
+    .sub-text{
+        width: 100%;
     }
     .vid-art-form{
         width: 648px;
         padding-bottom: 61px;
     }
+    .form-h{
+        font-size: 32px;
+    }
     .form-inner{
         padding-left: 112px;
         padding-right: 112px;
-    }
-    .googe-btn{
-        width: 424px;
     }
     .crypto-dashboard{
         display: none;
@@ -139,6 +146,9 @@
         padding-top: 62px;
         padding-bottom: 215px;
         align-items: center;
+    }
+    .dropdown-list {
+        width: 300px;
     }
     .top-left{
         top: 1291px;
@@ -168,5 +178,17 @@
     }
     .crypto-item{
         gap: 20px;
+        font-size: 20px;
+    }
+    .crypto-item div{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .add-crypto-btn{
+        width: 320px;
+        font-size: 16px;
+        gap: 0;
+        padding-right: 25.5px;
     }
 }
