@@ -11,9 +11,28 @@
   </head>
   <body>
     <script type="module" src="src/main.js"></script>
-        <video id="bg-video" class="split-video" autoplay loop muted playsinline>
-            <source src="background vid.mp4" type="video/mp4">
-        </video>
+    <video id="bg-video" class="split-video" autoplay loop muted playsinline>
+        <source src="background vid.mp4" type="video/mp4">
+    </video>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card text-popup" id="popupLearnMore">
+            <button class="popup-close-btn">&times;</button>
+            <div class="popup-title">The Digital Bridge Between Reality and Tomorrow</div>
+            <div class="popup-text-content">
+                <p>When you turn on your smart alarm clock in the morning of 2026, it already knows you slept seventeen minutes less than usual. The algorithm picks a morning playlist based on your heart rate and the current moon phase. Your voice assistant, trained on thousands of previous conversations, doesn't just say "good morning" - it reminds you: "Don't forget to pick up your package from the drone post before 10:30 AM." You step up to the mirror, and instead of your reflection, you see graphs of your hydration levels, your daily schedule, and a suggestion: "You might want to take extra vitamin D - it's going to be cloudy today."</p>
+                <p>In the evening, you activate "dark matter" mode at home: the lights dim gradually, following your movement; the Wi-Fi reallocates bandwidth to stream a movie in 32K; and the lounge chair warms up exactly the spot on your back that got tired from sitting. On screen - not just a film: a generative neural network adjusts the subtitles, replaces store signs with brands you recognize, and even redubs the actors if you whisper a request.</p>
+                <p>When you turn on your smart alarm clock in the morning of 2026, it already knows you slept seventeen minutes less than usual. The algorithm picks a morning playlist based on your heart rate and the current moon phase.</p>
+            </div>
+        </div>
+        <div class="popup-card video-popup" id="popupPlayVideo">
+            <button class="popup-close-btn">&times;</button>
+            <div class="modal-video-wrapper">
+                <video id="modalPlayer" controls>
+                    <source src="background vid.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="logo">
             <img src="src/assets/Kairos logo.png" alt="">

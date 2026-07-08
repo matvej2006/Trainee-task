@@ -10,6 +10,107 @@ button{
     cursor: pointer;
 }
 
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(3, 28, 57, 0.4); 
+    backdrop-filter: blur(10px); 
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.popup-overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.popup-card{
+    position: relative;
+    display: none;
+    width: 1465px;
+    box-sizing: border-box;
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.4s ease;
+}
+.popup-overlay.active .popup-card.active{
+    display: block;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+.popup-close-btn{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #2b045b; 
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 10;
+}
+.popup-close-btn:hover{
+    transform: scale(1.1);
+    background-color: #3d0781;
+}
+.text-popup{
+    max-width: 1464px;
+    max-height: 763px;
+    background: #ffffff;
+    padding: 60px 149px 145px 60px;
+}
+.text-popup .popup-title{
+    font-size: 48px;
+    color: #27005B;
+    width: 933px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.text-popup .popup-text-content{
+    color: #27005B;
+    font-size: 18px;
+    overflow-y: auto;
+}
+.text-popup .popup-text-content p{
+    margin-bottom: 40px;
+}
+.video-popup{
+    max-width: 1465px;
+    background: #000000;
+    border-radius: 4px;
+    overflow: visible;
+}
+.modal-video-wrapper{
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+.modal-video-wrapper video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .video-intro-container{
     position: absolute;
     top: 0;
