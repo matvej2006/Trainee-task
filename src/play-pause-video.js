@@ -1,7 +1,10 @@
-const playBtn = document.querySelector('#vid-btn-2');
+const playBtn = document.getElementById('vid-btn-2');
 const videos = document.querySelectorAll('.split-video');
 
-if (playBtn && videos.length > 0) {
+if (playBtn && videos.length === 2) {
+    const master = videos[0];
+    const slave = videos[1]; 
+    
     const btnText = playBtn.querySelector('.vid-btn-text');
     const btnIconContainer = playBtn.querySelector('.vid-btn-icon-2');
 
@@ -12,15 +15,33 @@ if (playBtn && videos.length > 0) {
     btnIconContainer.innerHTML = pauseIcon;
 
     playBtn.addEventListener('click', () => {
-        if (videos[0].paused) {
-            videos.forEach(video => video.play());
-            videos[1].currentTime = videos[0].currentTime;
-            btnText.textContent = 'Pause Video';
-            btnIconContainer.innerHTML = pauseIcon;
+        if (master.paused) {
+            master.play();
         } else {
-            videos.forEach(video => video.pause());
-            btnText.textContent = 'Play Video';
-            btnIconContainer.innerHTML = playIcon;
+            master.pause();
+        }
+    });
+
+    master.addEventListener('play', () => {
+        slave.currentTime = master.currentTime;
+        slave.play().catch(() => {}); 
+        btnText.textContent = 'Pause Video';
+        btnIconContainer.innerHTML = pauseIcon;
+    });
+
+    master.addEventListener('pause', () => {
+        slave.pause();
+        slave.currentTime = master.currentTime;
+        
+        btnText.textContent = 'Play Video';
+        btnIconContainer.innerHTML = playIcon;
+    });
+
+    master.addEventListener('timeupdate', () => {
+        const drift = Math.abs(master.currentTime - slave.currentTime);
+        
+        if (drift > 0.03) {
+            slave.currentTime = master.currentTime;
         }
     });
 }
