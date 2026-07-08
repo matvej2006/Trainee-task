@@ -121,7 +121,7 @@ button{
     overflow: hidden;
 }
 .split-video{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -180,6 +180,9 @@ header{
     opacity: 0%;
     transform: translateY(-75px);
     animation: fadeInFT 1s ease-out forwards 400ms;
+}
+.burger-btn, .mobile-menu-backdrop {
+    display: none;
 }
 .nav-elem{
     padding-right: 20px;
@@ -353,7 +356,7 @@ header{
     background: linear-gradient(0deg, #ffffff 50%, #27005B 50%);
 }
 .form-btn-1{
-    width: 212.5px;
+    width: 50%;
     height: 47px;
     border-radius: 10px;
     border: none;
@@ -362,7 +365,7 @@ header{
     color: #27005B;
 }
 .form-btn-2{
-    width: 212.5px;
+    width: 50%;
     height: 47px;
     border-radius: 10px;
     border: none;
@@ -433,6 +436,9 @@ header{
     border: none;
 }
 
+.crypto-dashboard-mobile{
+    display: none;
+}
 .crypto-dashboard{
     z-index: 0;
     position: relative;
