@@ -96,6 +96,35 @@
         transition: color 0.3s ease;
     }
 
+    .popup-overlay{
+        box-sizing: border-box;
+    }
+    .popup-card{
+        width: 100%;
+        max-width: 647px;
+    }
+    .text-popup{
+        background: #ffffff;
+        padding: 54px 40px 75px 40px;
+        max-height: 80vh;
+        box-sizing: border-box;
+        display: flex !important; 
+        flex-direction: column;
+    }
+    .text-popup .popup-title{
+        flex-shrink: 0;
+        font-size: 48px;
+        color: #27005B;
+        width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    .popup-text-content{
+        flex-grow: 1;      
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .logo{
         width: 173px;
         position: fixed;

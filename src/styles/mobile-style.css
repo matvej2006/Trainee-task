@@ -96,6 +96,13 @@
         transition: color 0.3s ease;
     }
 
+    .popup-card{
+        width: 320px;
+    }
+    .text-popup .popup-title{
+        font-size: 24px;
+    }
+
     .logo{
         width: 100px;
         position: fixed;

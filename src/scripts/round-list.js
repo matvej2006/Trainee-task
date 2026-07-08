@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const rightCount = rightCol.children.length;
 
           if (leftCount <= rightCount) {
+            newItem.className = 'crypto-item appear-left';
             newItem.innerHTML = `
                 <span class="price">${price}</span>
                 <span class="name">${name}</span>
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             leftCol.appendChild(newItem);
           } else {
+            newItem.className = 'crypto-item appear-right';
             newItem.innerHTML = `
                 <img src="${imgSrc}" alt="${name}" class="coin-icon">
                 <span class="name">${name}</span>

@@ -25,6 +25,7 @@ button{
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
+    box-sizing: border-box;
 }
 .popup-overlay.active{
     opacity: 1;
@@ -124,8 +125,7 @@ button{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     object-fit: cover;
     z-index: -1;
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -479,6 +479,7 @@ header{
 }
 .crypto-column{
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 60px; 
     width: 100%;
@@ -486,17 +487,69 @@ header{
     z-index: 1;
 }
 .crypto-item{
+    position: relative;
     display: flex;
     align-items: center;
     gap: 40px;
     color: #ffffff;
     font-size: 18px;
 }
+@keyframes slideInFromLeft{
+    from {
+        opacity: 0;
+        left: -50px;
+        max-height: 0;        
+        padding-top: 0;       
+        padding-bottom: 0;
+        margin-bottom: 0;    
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        left: 0;
+        max-height: 150px;  
+        padding-top: 9.5px;    
+        padding-bottom: 9.5px;
+        margin-bottom: 20px;
+        filter: blur(0);
+    }
+}
+@keyframes slideInFromRight{
+    from {
+        opacity: 0;
+        right: -50px;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        right: 0;
+        max-height: 150px;
+        padding-top: 9.5px;
+        padding-bottom: 9.5px;
+        margin-bottom: 20px;
+        filter: blur(0);
+    }
+}
+.crypto-item.appear-left{
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+.crypto-item.appear-right{
+    animation: slideInFromRight 1s ease-out forwards;
+}
 .left-side{
     align-items: flex-end;
 }
 .right-side{
     align-items: flex-start;
+}
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
 }
 .coin-icon{
     width: 41px;
@@ -561,28 +614,40 @@ header{
     padding-bottom: 9.5px;
     color: #27005B;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.4s ease;
 }
 .dropdown-list li img{
     width: 32px;
     padding-right: 20px;
 }
 .dropdown-list li:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.4);
 }
 .add-crypto-btn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #ffffff;
     color: #2b045b;
     width: 346px;
+    box-sizing: border-box;
     border: none;
-    padding-top: 14.5px;
-    padding-bottom: 14.5px;
-    padding-left: 45.5px;
+    padding: 14.5px 25.5px 14.5px 45.5px; 
     font-size: 16px;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
     gap: 15px;
+    cursor: pointer; 
+    transition: color 0.5s ease, background-color 0.5s ease; 
+}
+.add-crypto-btn .arrow-icon{
+    display: inline-block;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+.add-crypto-btn:hover{
+    background-color: #BDAB6E; 
+    color: #ffffff;           
+}
+.add-crypto-btn:hover .arrow-icon{
+    transform: rotate(90deg); 
+    color: #ffffff;           
 }
