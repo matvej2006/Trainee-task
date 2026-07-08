@@ -7,15 +7,55 @@ body{
     background-color: #031C39;
 }
 
-.back-video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.video-intro-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
-    object-fit: cover;
+    overflow: hidden;
 }
+.video-half{
+    position: absolute;
+    width: 100%;
+    height: 50vh; 
+    overflow: hidden;
+    will-change: transform;
+}
+.top-half{
+    top: 0;
+    clip-path: inset(0 0 100% 0);
+    animation: openTopEdges 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 100ms;
+}
+.bottom-half{
+    bottom: 0;
+    clip-path: inset(100% 0 0 0); 
+    animation: openBottomEdges 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 100ms;
+}
+@keyframes openTopEdges{
+    0% { clip-path: inset(0 0 100% 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+@keyframes openBottomEdges{
+    0% { clip-path: inset(100% 0 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+.split-video{
+    position: absolute;
+    width: 100vw;
+    height: 100vh; 
+    object-fit: cover;
+    left: 0;
+}
+.top-half .split-video{
+    top: 0;
+}
+
+.bottom-half .split-video{
+    bottom: 0;
+}
+
 .head{
     color: white;
     background: linear-gradient(to bottom, rgba(3, 28, 57, 0) 0%, #031C39 100%);;
@@ -31,6 +71,15 @@ header{
     position: fixed;
     top: 35px;
     left: 80px;
+    opacity: 0%;
+    transform: translateY(-75px);
+    animation: fadeInFT 1s ease-out forwards 400ms;
+}
+@keyframes fadeInFT{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .logo img{
     width:100%;
@@ -44,11 +93,37 @@ header{
     position: fixed;
     top: 35px;
     right: 80px;
+    opacity: 0%;
+    transform: translateY(-75px);
+    animation: fadeInFT 1s ease-out forwards 400ms;
 }
 .nav-elem{
     padding-right: 20px;
     padding-left: 20px;
     border-right: 1px solid rgba(255, 255, 255 , 0.4);
+}
+.nav-elem span{
+    position: relative;
+    display: inline-block; 
+    padding-bottom: 1px;
+}
+.nav-elem span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: rgba(255, 255, 255 , 0.4); 
+    
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-elem:hover span::after {
+    transform: scaleX(1);
 }
 
 .vid-art{
@@ -64,12 +139,38 @@ header{
 .vid-art-text{
     width: 1167px;
 }
+.main-title .word, 
+.sub-text .word{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: revealWord 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    margin-right: 0.25em;
+}
+.main-title .word{
+    animation-delay: calc(1.0s + (var(--i) * 0.12s));
+}
+.sub-text .word{
+    animation-delay: calc(1.5s + (var(--i) * 0.03s));
+}
+@keyframes revealWord{
+    to {
+        opacity: 1;
+    }
+}
+
 .vid-btns{
     margin-top: 37px;
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: row;
+    gap: 40px;
+}
+@property --fill-pos{
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 70.5%;
 }
 .vid-btn{
     display: flex;
@@ -79,16 +180,50 @@ header{
     height: 55px;
     border-radius: 5px;
     padding: 18px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: --fill-pos 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                transform 0.2s ease;
+    transform: scale(0.8);
+    animation: scal 2s cubic-bezier(0.16, 1, 0.3, 1) 1200ms forwards;
+    opacity: 0;
+}
+@keyframes scal {
+    to{
+        opacity: 100%;
+        transform: scale(1);
+    }
 }
 #vid-btn-1{
     border: none;
-    background: linear-gradient(120deg, #ffffff calc(100% - 61px), #2b045b calc(100% - 61px));
-    margin-right: 40px;
+    color: #2b045b;
+    background: linear-gradient(120deg, #ffffff var(--fill-pos), #2b045b var(--fill-pos));
+}
+#vid-btn-1:hover{
+    --fill-pos: 0%; 
+    color: #ffffff;
 }
 #vid-btn-2{
-    color: white;
-    border: 1px solid white;
-    background: linear-gradient(120deg, rgb(0,0,0,0) calc(100% - 61px), #ffffff calc(100% - 61px));
+    color: #ffffff; 
+    border: 1px solid #ffffff;
+    background: linear-gradient(120deg, rgba(0,0,0,0) var(--fill-pos), #ffffff var(--fill-pos));
+}
+#vid-btn-2:hover{
+    --fill-pos: 0%; 
+    color: #2b045b; 
+    border-color: #ffffff;
+}
+.vid-btn-icon-1, .vid-btn-icon-2{
+    transition: color 0.3s ease;
+}
+#vid-btn-1:hover .vid-btn-icon-1{
+    color: #ffffff;
+}
+
+#vid-btn-2:hover .vid-btn-icon-2{
+    color: #2b045b;
 }
 .vid-btn-text{
   font-size: 16px;
@@ -113,6 +248,15 @@ header{
     padding: 30px 0px;
     border-radius: 10px;
     background: linear-gradient(0deg, #ffffff 50%, #27005B 50%);
+    transform: translateX(80px);
+    opacity: 0%;
+    animation: fadeInFR 0.8s cubic-bezier(.36,.21,.84,.71) forwards 1600ms;
+}
+@keyframes fadeInFR {
+    to{
+        opacity: 100%;
+        transform: translateX(0px);
+    }
 }
 .form-inner{
     padding: 50px 40px 0px 40px;
@@ -157,8 +301,14 @@ header{
     border-radius: 5px;
     gap: 10px; 
     margin-bottom: 30px;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
-.start-jour-btn{
+.google-btn:hover{
+    background-color: transparent;
+    color: #BDAB6E;
+    border: 1px solid #BDAB6E;
+}
+.start-jour{
     color: black;
     font-size: 16px;
     text-transform: capitalize;
@@ -193,6 +343,12 @@ header{
     color: #BDAB6E;
     font-size: 16px;
     background-color: transparent;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+.form-btn-create:hover{
+    background-color: #BDAB6E;
+    color: #ffffff;
+    border: none;
 }
 
 .crypto-dashboard{

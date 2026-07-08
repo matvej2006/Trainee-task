@@ -11,35 +11,44 @@
   </head>
   <body>
     <script type="module" src="src/main.js"></script>
-    <video autoplay muted loop class="back-video">
-        <source src="src/assets/background vid.mp4" type="video/mp4">
-    </video>
+    <div class="video-intro-container">
+        <div class="video-half top-half">
+            <video autoplay muted loop class="split-video">
+                <source src="background vid.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-half bottom-half">
+            <video autoplay muted loop class="split-video">
+                <source src="background vid.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
     <header>
         <div class="logo">
             <img src="src/assets/Kairos logo.png" alt="">
         </div>
         <div class="nav">
             <div class="nav-elem">
-                HOME
+                <span>HOME</span>
             </div>
             <div class="nav-elem">
-                ABOUT US
+                <span>ABOUT US</span>
             </div>
             <div class="nav-elem">
-                PROJECTS
+                <span>PROJECTS</span>
             </div>
             <div class="nav-elem" style="border: none;">
-                CONTACT US
+                <span>CONTACT US</span>
             </div>
         </div>
     </header>
     <div class="head">
         <div class="vid-art">
             <div class="vid-art-text">
-                <div style="margin-bottom: 40px; width: 933px; font-size: 96px; text-transform: uppercase;">
+                <div style="margin-bottom: 40px; width: 933px; font-size: 96px; text-transform: uppercase;" class="main-title">
                     From the Field of All Possibility
                 </div>
-                <div style="width: 1016px; font-size: 18px;">
+                <div style="width: 1016px; font-size: 18px;" class="sub-text">
                     This is an emergent space where ideas are not created, 
                     but carefully discovered. We navigate the vast potential 
                     to bring forth only the most resonant patterns and coherent forms. 
@@ -85,7 +94,7 @@
                         </span>
                         <span class="google-btn-text">Google</span>
                     </button>
-                    <div class="start-jour-btn">
+                    <div class="start-jour">
                         start your journey now!
                     </div>
                     <div class="divider">

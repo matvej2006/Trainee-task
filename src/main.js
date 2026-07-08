@@ -1,3 +1,4 @@
 import './style.css'
 import './round-list.js'
 import './crypto-ws.js'
+import './word-by-word-anim.js'
