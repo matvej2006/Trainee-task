@@ -365,24 +365,40 @@ header{
     display: flex;
     flex-direction: row;
     background: linear-gradient(0deg, #ffffff 50%, #27005B 50%);
+    overflow: hidden;
+}
+.form-btns button{
+    width: 50%;
+    height: 47px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.35s ease, 
+                color 0.35s ease, 
+                border-radius 0.35s ease;
 }
 .form-btn-1{
-    width: 50%;
-    height: 47px;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
     background-color: white;
     color: #27005B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .form-btn-2{
-    width: 50%;
-    height: 47px;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
     background-color: #27005B;
     color: white;
+    border-bottom-right-radius: 12px;
+}
+.form-btns.business-active .form-btn-1 {
+    background-color: #27005B; 
+    color: #ffffff;
+    border-radius: 0 10px 10px 10px; 
+}
+
+.form-btns.business-active .form-btn-2 {
+    background-color: #ffffff; 
+    color: #27005B;
+    border-radius: 10px 10px 0 0; 
 }
 .google-btn{
     display: flex;
