@@ -1,2 +1,1 @@
-К сожалению я не смог настроить публичную ссылку на сайт (хостинг не читает файлы сайта). Прошу проверить без этого сделанный мной сайт :D
-Можете запустить сайт используя мои архивы, что были прикреплены в письма на емеил
+One of the first real projects. It's the internship task that is built with Vite. It contains HTML/CSS, JS, PHP. Added OAuth2.
